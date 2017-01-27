@@ -18,9 +18,15 @@ RUN apk add --no-cache \
     mv /usr/local/ansible* /usr/local/ansible && \
     rm /${ANSIBLE_VER}.tar.gz && \
     chmod 0755 /usr/local/ansible/bin/* && \
-    pip install paramiko PyYAML Jinja2 httplib2 six && \
+    pip install paramiko pycrypto PyYAML Jinja2 httplib2 six && \
     apk del \
         alpine-sdk \
         libffi-dev \
         openssl-dev && \
     rm -rf /var/cache/apk/*
+
+# Install text editors so files protected by Ansible Vault can be edited.
+# Vim => /usr/bin/vim
+# Nano => /usr/bin/nano
+RUN apk add --no-cache nano vim
+ENV EDITOR=/usr/bin/vim
