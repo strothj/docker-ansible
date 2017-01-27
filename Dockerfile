@@ -1,7 +1,7 @@
 FROM python:2-alpine
 MAINTAINER Jason Strothmann <jason@jasons.io>
 
-ENV ANSIBLE_VER ansible-2.2.1.0
+ENV ANSIBLE_VER ansible-2.2.0.0
 ENV ANSIBLE_HOME=/usr/local/ansible \
     PYTHONPATH=/usr/local/ansible/lib:$PYTHONPATH \
     PATH=/usr/local/ansible/bin:$PATH \
