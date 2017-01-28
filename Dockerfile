@@ -31,6 +31,6 @@ RUN apk add --no-cache \
 RUN apk add --no-cache nano vim
 ENV EDITOR=/usr/bin/vim
 
-# Needed so played against the Docker container are supported.
+# Needed so plays against the Docker container are supported.
 # Prevents error: "module_stderr": "/bin/sh: /usr/bin/python: not found\n",
 RUN apk add --no-cache python
